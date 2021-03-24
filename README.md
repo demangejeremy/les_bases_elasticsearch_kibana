@@ -34,6 +34,6 @@ POST my-first-index/_doc/
 Pour ajouter des données dans un index en Python, référez-vous au script __add_data.py__.
 Pour ajouter ou modifier des champs dans des données sur un index en Python, référez-vous au script __modify_data.py__.
 
-## Utiliser kibana
+## Utiliser Kibana
 
 Rendez-vous sur http://localhost:5601 pour utiliser l'interface Kibana pour créer des analyses et visualiser vos index.

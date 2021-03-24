@@ -1,7 +1,7 @@
 # Les bases d'Elasticsearch et de Kibana
 
 ## Introduction
-Ce dépôt contient une présentation ainsi que quelques codes basiques pour apprendre et découvrir les grandes bases d'ElasticSearch et de Kibana.
+Ce dépôt contient une présentation ainsi que quelques scripts basiques en Python pour apprendre et découvrir les grandes bases d'ElasticSearch et de Kibana.
 
 ## Installation
 Pour lancer ElasticSearch et Kibana, assurez-vous dans un premier temps d'avoir installé et lancé correctement Docker et Docker Compose : https://docs.docker.com/get-docker/

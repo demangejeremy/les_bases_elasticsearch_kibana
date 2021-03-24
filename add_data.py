@@ -1,18 +1,16 @@
-from Elasticsearch import Elasticsearch
+from elasticsearch import Elasticsearch
 import uuid
 
-es = Elasticsearch(hosts=["http://localhost:9200"])
+es = Elasticsearch()
 
 my_data = {
-    "name": "George Peterson",
+    "name": "John Doe",
     "sex": "male",
     "age": "34",
-    "years": "10"
 }
 
 response = es.index(
-    index='employees',
-    doc_type='person',
+    index='my-first-index',
     id=uuid.uuid4(),
     body=my_data
 )

@@ -3,15 +3,14 @@ from elasticsearch import Elasticsearch
 import re
 
 # Var
-boolindex = 0
 i = 0
 
 # Index et champs a analyser
-indexlocal = "proverbes"
-champsatraiter = "texte"
+indexlocal = "my-first-index"
+champsatraiter = "name"
 
 # Modifier le code au besoin
-es = Elasticsearch(hosts=["http://localhost:9200"])
+es = Elasticsearch()
 es.indices.put_settings(index=indexlocal,
                         body={"index": {
                             "max_result_window": 500000
@@ -37,13 +36,13 @@ for hit in res['hits']['hits']:
         doc = es.get(index=indexlocal, id=idloc)
 
         # Recup texte
-        texte = doc['_source']['texte']
+        texte = doc['_source'][champsatraiter]
         print(texte)
 
         # Ajouter un champs
-        new = []
+        new = ["test"]
         # new = postagging(texte)
-        entry = {'nouveau_champs': new}
+        entry = {'nouveau': new}
 
         print(i)
         print("="*20)

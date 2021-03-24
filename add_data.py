@@ -6,7 +6,8 @@ es = Elasticsearch()
 my_data = {
     "name": "John Doe",
     "sex": "male",
-    "age": "34",
+    "age": 31,
+    "competences": ["unknow"]
 }
 
 response = es.index(
